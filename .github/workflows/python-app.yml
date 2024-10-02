@@ -6,19 +6,19 @@ name: raja app
 on:
   workflow_dispatch:
     inputs:
-      text_input:
-        description: "Enter your name"
+      src_job_id:
+        description: "Enter Databricks job ID from source"
         required: true
         default: "Sample Text"
-      option_input:
+      job_opration:
         description: "Choose an option to go ahead"
         required: true
         default: "Option1"
         type: choice
         options:
-          - Option1
-          - Option2
-          - Option3
+          - INSERT
+          - UPDATE
+          - DELETE
 
 jobs:
   user-input-job:
